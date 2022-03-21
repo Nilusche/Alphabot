@@ -146,6 +146,7 @@ module.exports = client=>{
 
     client.on('messageReactionAdd', async(reaction, user)=>{
         if(reaction.message.channel.id = channelID){
+            console.log("add");
             handleReaction(reaction,user,true);
         }
     })
