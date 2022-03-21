@@ -1,5 +1,6 @@
 const { Client, Intents } = require('discord.js');
 require('dotenv').config();
+let token = process.env.token;
 const client = new Client({
 	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS],
 	partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
@@ -114,4 +115,4 @@ client.on('ready',()=>{
     role(client);
 })
 
-client.login(config.token);
+client.login(token);
