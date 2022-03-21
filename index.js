@@ -113,6 +113,7 @@ client.on('ready',()=>{
         
     })
     role(client);
+    
 })
 
 client.login(token);
