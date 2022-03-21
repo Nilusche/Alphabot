@@ -113,7 +113,7 @@ client.on('ready',()=>{
     command(client, 'show',()=>{
         
     })
-    role(client);
+    //role(client);
     
 })
 
