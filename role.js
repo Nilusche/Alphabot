@@ -56,7 +56,7 @@ module.exports = client=>{
 
     let reactions=[];
     let emojitext='\n**Softwaretechnik**\n';
-
+/*
     for(const key in swe){
         const emoji = getEmoji(key);
         reactions.push(emoji);
@@ -119,7 +119,7 @@ module.exports = client=>{
     reactions=[];
 
 
-
+*/
     const handleReaction = (reaction, user, add)=>{
         if(user.id==='955076790928416868'){
             return;
