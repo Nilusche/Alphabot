@@ -15,11 +15,11 @@ const emojis= {
     ADA: 'applied-data-analytics',
     BDA1: 'big-data-analytics',
     BusInt:'business-intelligence',
-    CompilerBau:'compilerbau',
-    ComputerGrafik:'computergrafik',
+    CompBau:'compilerbau',
+    CompGra:'computergrafik',
     DBWT2: 'datenbanken-2',
     DevOps: 'development-for-operations',
-    EEmbs: 'embedded-software',
+    EEmbS: 'embedded-software',
     KI1: 'künstliche-intelligenz-1',
     ExpGamDes:'experimental-game-design',
     FSW: 'fahrzeugsoftware',
@@ -43,7 +43,7 @@ const emojis= {
     SSE: 'safety-engineering', 
     TE: 'technikethik',
     WI: 'wirtschaftinformatik',
-    InfoVis: 'information-visualization'
+    IV: 'information-visualization'
 }
 
 client.on('ready',()=>{
