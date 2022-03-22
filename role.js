@@ -198,13 +198,20 @@ module.exports = client=>{
         }
         const role = guild.roles.cache.find((role)=>role.name===roleName);
         const member = guild.members.cache.find((member)=>member.id ===user.id);
-        if(add){
-            
-            member.roles.add(role);
+        try{
+            if(role){
+                if(add){
+                
+                member.roles.add(role);
 
-        }else{
-            member.roles.remove(role);
+                }else{
+                    member.roles.remove(role);
+                }
+            }  
+        }catch(E){
+            console.log(roleName, role);
         }
+        
 
     }
 
