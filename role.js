@@ -3,7 +3,7 @@ const randomEmoji = require('./random-emoji');
 const random = require('./random-emoji');
 module.exports = client=>{
     const channelID = '955594905806340116';
-    const getEmoji = emojiName=> client.emojis.cache.find(emoji=>emoji.name ===emojiName);
+   // const getEmoji = emojiName=> client.emojis.cache.find(emoji=>emoji.name ===emojiName);
 
     const swe={
         CompBau:'Compilerbau',
@@ -55,7 +55,7 @@ module.exports = client=>{
         AmbInt: 'Ambient Intelligence',
          BusInt:'Business Intelligence',
     }
-
+    /*
     const all= {
         ITSM:'IT Service Management',
         ServiceNow: 'Service Management mit ServiceNow',
@@ -91,7 +91,7 @@ module.exports = client=>{
         PALO: 'Performance Analyse und Laufzeitoptimierung',
         SSE: 'System Safety Engineering', 
         ReqEng: 'Requirements Engineering',
-    }
+    }*/
 /*
     let reactions=[];
     let emojitext='\n**Softwaretechnik**\n';
@@ -183,13 +183,55 @@ module.exports = client=>{
     reactions=[];
 
 */
+    function getEmoji(e){
+        return client.emojis.cache.find(emoji=>emoji.name===e);
+    };
+    let all ={
+        '😁':'CompBau',
+        '🐯':'DBWT2',
+        '🔇':'DevOps',
+        '🍏':'FITU',
+        '🐦':'MBSE',
+        '💏':'MVS',
+        '🚀':'ORMua',
+        '🛂':'PALO',
+        '🌖':'SSE',
+        '🔈':'ReqEng',
+        '🔖':'ITIS',
+        '🍝':'EEmbS',
+        '🚌':'FSW',
+        '♑':'IndRob',
+        '💞':'AW',
+        '😜':'WI',
+        '👵':'InfTheo',
+        '🎴':'Linux',
+        '🐍':'IV',
+        '🎷':'KI1',
+        '⛺':'CompGra',
+        '🎋':'BDA1',
+        '💯':'ServiceNow',
+        '📙':'LinOpt',
+        '💉':'GamDes',
+        '🐩':'ExpGamDes',
+        '🍧':'MP',
+        '😻':'MIS',
+        '➖':'TE',
+        '😊':'ITS2',
+        '💒':'ITSM',
+        '🎂':'BusInt',
+        '🌏':'AmbInt',
+
+
+
+
+    }
     console.log(all);
     const handleReaction = (reaction, user, add)=>{
         if(user.id==='955076790928416868'){
             return;
         }
         const emoji = reaction._emoji.name;
-
+        //console.log(emoji);
         const {guild} = reaction.message;
         
         const roleName = all[emoji];
