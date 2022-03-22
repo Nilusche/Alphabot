@@ -92,7 +92,7 @@ module.exports = client=>{
         SSE: 'System Safety Engineering', 
         ReqEng: 'Requirements Engineering',
     }
-
+/*
     let reactions=[];
     let emojitext='\n**Softwaretechnik**\n';
     let i=0;
@@ -182,7 +182,7 @@ module.exports = client=>{
     emojitext="";
     reactions=[];
 
-
+*/
     console.log(all);
     const handleReaction = (reaction, user, add)=>{
         if(user.id==='955076790928416868'){
@@ -202,7 +202,7 @@ module.exports = client=>{
             if(role){
                 if(add){
                 
-                member.roles.add(role);
+                    member.roles.add(role);
 
                 }else{
                     member.roles.remove(role);
@@ -216,12 +216,14 @@ module.exports = client=>{
     }
 
     client.on('messageReactionAdd', async(reaction, user)=>{
-        if(reaction.message.channel.id = channelID){
+        console.log("add", reaction.message.channel.id, channelID);
+        if(reaction.message.channel.id == channelID){
             handleReaction(reaction,user,true);
         }
     })
     client.on('messageReactionRemove',async(reaction, user)=>{
-        if(reaction.message.channel.id = channelID){
+        console.log("remove", reaction.message.channel.id, channelID);
+        if(reaction.message.channel.id == channelID){
             handleReaction(reaction, user, false);
         }
     })
