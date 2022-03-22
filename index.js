@@ -2,7 +2,10 @@ const { Client, Intents } = require('discord.js');
 require('dotenv').config();
 let token = process.env.TOKEN;
 console.log(process.env.TOKEN);
-const client = Discord.Client();
+const client = new Client({
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS],
+	partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+});
 const config = require("./config.json");
 const role = require("./role");
 const command = require('./command');
